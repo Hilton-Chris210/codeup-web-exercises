@@ -52,7 +52,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(random){
-        return (random == 2);
+        return (random === 2);
 }
 console.log(random)
 console.log(isTwo(random))
@@ -100,6 +100,6 @@ alert("Your tip amount is " + "$" + tipAmount)
  */
 
 function applyDiscount(originalPrice, discountPercent){
-    let discountedPrice =
-    return originalPrice * discountPercent
+    return originalPrice - (originalPrice * discountPercent)
 }
+console.log(applyDiscount(200.00,.10))
