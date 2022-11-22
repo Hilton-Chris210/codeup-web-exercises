@@ -8,9 +8,14 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    let message = "Hello, " + name + "!"
-    return message;
+    return "Hello, " + name + "!"
 }
+console.log(sayHello("tedCruz"))
+// arrow
+const sayHello2 = (name2) => {
+   return `Hello, ${name2}!`
+}
+console.log(sayHello2("nancy"))
 
 /**
  * TODO:
