@@ -192,6 +192,7 @@ if (luckyNumber == 0){
     alert(calculateTotal())
 } else if (luckyNumber == "5"){
     alert("Congrats you get a %100 discount... aka FREE")
+    let fiveDiscount = 0
     alert(calculateTotal())
 } else {
     console.log("how the hell did you end up here")

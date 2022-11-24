@@ -2,36 +2,42 @@ let luckyNumber = Math.floor(Math.random() * 6);
 console.log(luckyNumber)
 let randomNumber = Math.floor(Math.random(1) * 100);
 console.log(randomNumber)
+let zeroDiscount = 1
+let oneDiscount = .90
+let twoDiscount = .75
+let threeDiscount = .65
+let fourDiscount = .50
+let fiveDiscount = 0
+
 
 function calculateTotal(luckyNumber, randomNumber){
-return discountPrice = luckyNumber * randomNumber
-    console.log(discountPrice)
-}
+return luckyNumber*randomNumber;
+    }
+let totalD = calculateTotal(luckyNumber, randomNumber);
+console.log(totalD)
 
-function MULTIPLY(price, shipping) {
-    //Return the sum
-    return price*shipping;
-}
-
-//Call MULTIPLY to multiply the two numbers
-var product=MULTIPLY(number1, number2);
-
-if (luckyNumber == 0){
+if (luckyNumber === 0){
     alert("Sorry no discount")
-    alert(calculateTotal())
-} else if ( luckyNumber == "1"){
+    zeroDiscount
+
+} else if ( luckyNumber === "1"){
     alert("Congrats you get a %10 discount")
-    alert(calculateTotal())
-} else if (luckyNumber == "2"){
+    return oneDiscount
+
+} else if (luckyNumber === "2"){
     alert("Congrats you get a %25 discount")
-    alert(calculateTotal())
-} else if (luckyNumber == "3"){
+    return twoDiscount
+
+} else if (luckyNumber === "3"){
     alert("Congrats you get a %35 discount")
-    alert(calculateTotal())
-} else if (luckyNumber == "4"){
+    return threeDiscount
+
+} else if (luckyNumber === "4"){
     alert("Congrats you get a %50 discount")
-    alert(calculateTotal())
-} else if (luckyNumber == "5"){
+    return fourDiscount
+
+} else if (luckyNumber === "5"){
     alert("Congrats you get a %100 discount... aka FREE")
-    alert(calculateTotal())
+    return fiveDiscount
+
 }
