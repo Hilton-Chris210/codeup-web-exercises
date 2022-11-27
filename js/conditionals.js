@@ -239,5 +239,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  *
  *
  * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
+ * HINT: The way we prompt for a value could be improve
  */
+
+function numberImput() {
+    confirm("Would you like to play a game?")
+    let userInput = prompt("Please enter a number if you dare!")
+    console.log(userInput);
+
+    if ((typeof (parseFloat(userInput))) === (typeof (2))) {
+        alert("Good Boy")
+    } else {
+        alert ("Dont F with me! Enter an integer")
+        }
+
+    if (userInput % 2 === 0) {
+        alert("your Number is Even");
+    } else if (userInput % 2 !== 0) {
+        alert("Your number is odd")
+    }
+    alert("Your Number plus 100 is " + (parseFloat(userInput)+100))
+    if (Math.sign(parseFloat(userInput)) === 1) {
+        alert("Your number is positive!")
+    } else {
+        alert("Your Number is Negative")
+    }
+    console.log(typeof (parseFloat(userInput)))
+}
+
+
+
+
+
+
+
+console.log(numberImput())
+
