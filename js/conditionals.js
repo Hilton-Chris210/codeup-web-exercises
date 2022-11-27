@@ -247,10 +247,10 @@ function numberImput() {
     let userInput = prompt("Please enter a number if you dare!")
     console.log(userInput);
 
-    if ((typeof (parseFloat(userInput))) === (typeof (2))) {
-        alert("Good Boy")
+    if (parseFloat(userInput) === NaN) {
+        alert("Dont F with me! Enter an integer")
     } else {
-        alert ("Dont F with me! Enter an integer")
+        alert ("goog boy")
         }
 
     if (userInput % 2 === 0) {
@@ -265,6 +265,7 @@ function numberImput() {
         alert("Your Number is Negative")
     }
     console.log(typeof (parseFloat(userInput)))
+
 }
 
 
