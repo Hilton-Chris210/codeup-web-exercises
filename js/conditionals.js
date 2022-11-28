@@ -248,26 +248,28 @@ function numberInput() {
 
     if (didConfirm) {
         let userInput = prompt("Please enter a number if you dare!");
-         userInput = parseFloat(userInput);
+        userInput = parseFloat(userInput);
 
         if (!isNaN(userInput)) {
-            if (isEven(userInput)){
-                alert ("Your Number is Even");
-            } else{
+            if (isEven(userInput)) {
+                alert("Your Number is Even");
+            } else {
                 alert("Your Number is odd");
             }
-            if (isPositive(userInput)){
+            if (isPositive(userInput)) {
                 alert("Your number is positive");
             } else {
                 alert("your number is Negative");
             }
-            alert (isCentury(userInput));
-            } else {
+            alert(isCentury(userInput));
+        } else {
             alert("Please enter a number!");
         }
     } else {
         alert("User did not want to play a game");
-}}
+    }
+}
+
 
 function isEven (userInput) {
     return (userInput % 2 === 0);
