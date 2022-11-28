@@ -244,7 +244,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 numberInput()
 
 function numberInput() {
-    let didConfirm = confirm("Would you like to play a game?")
+    let didConfirm = confirm("Would you like to play a game?");
 
     if (didConfirm) {
         let userInput = prompt("Please enter a number if you dare!");
@@ -252,16 +252,16 @@ function numberInput() {
 
         if (!isNaN(userInput)) {
             if (isEven(userInput)){
-                alert ("Your Number is Even")
+                alert ("Your Number is Even");
             } else{
-                alert("Your Number is odd")
+                alert("Your Number is odd");
             }
-            if (isPositive(userInput)) {
-                alert("Your number is positive")
+            if (isPositive(userInput)){
+                alert("Your number is positive");
             } else {
-                alert("your number is Negative")
+                alert("your number is Negative");
             }
-            alert (isCentury(userInput))
+            alert (isCentury(userInput));
             } else {
             alert("Please enter a number!");
         }
@@ -270,15 +270,15 @@ function numberInput() {
 }}
 
 function isEven (userInput) {
-    return (userInput % 2 === 0)
+    return (userInput % 2 === 0);
 }
 
 function isPositive(userInput) {
-    return (Math.sign(parseFloat(userInput)) === 1)
+    return (Math.sign(parseFloat(userInput)) === 1);
 }
 
 function isCentury(userInput){
-    return ("Your number plus 100 is " + (userInput + 100))
+    return ("Your number plus 100 is " + (userInput + 100));
 }
 
 
