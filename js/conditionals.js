@@ -103,6 +103,8 @@
 //     case "orange":
 //         console.log("Hey nothing rymes with orange")
 //         break;
+//      default:
+//          break;
 // }
 
 /**
