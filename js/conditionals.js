@@ -21,25 +21,35 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// let analyzeColor = prompt("What is your favorite color?")
-// if (analyzeColor == "red"){
-//     console.log("Some peppers are red")
-// } else if ( analyzeColor == "blue"){
-//     console.log("Not many foods are blue")
-// } else if (analyzeColor == "green"){
-//     console.log("the green in this food comes from cloraphyl")
-// } else if (analyzeColor == "yellow"){
-//     console.log("bananas are yellow")
-// } else if (analyzeColor == "orange"){
-//     console.log("Orange is a color and a food")
-// } else if (analyzeColor == "indigo"){
-//     console.log("indigo is just fancy blue")
-// } else if (analyzeColor == "violet"){
-//     console.log("go frogs")
-// } else {
-//     console.log( "Not sure about" + analyzeColor)
-// }
+let colorInput = prompt("what is your favorite color");
+analyzeColor(colorInput)
+console.log(colorInput)
 
+function analyzeColor(input){
+    const inputLoweCase = input.toLowerCase()
+    console.log(inputLoweCase)
+    if (isNaN(inputLoweCase)){
+        if (inputLoweCase === "blue"){
+            alert ("berries are blue");
+        } else if (inputLoweCase === "red"){
+            alert("peppers are red");
+        } else if (inputLoweCase === "green"){
+            alert("peppers are green");
+        } else if (inputLoweCase === "yellow"){
+            alert("peppers are yellow");
+        } else if (inputLoweCase === "orange"){
+            alert("peppers are orange");
+        } else if (inputLoweCase === "indigo"){
+            alert("peppers are indigo");
+        } else if (inputLoweCase === "violet"){
+            alert("peppers are violet");
+        } else{
+            alert("not in color list");
+        }
+    } else {
+        alert ("not a string");
+    }
+}
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
