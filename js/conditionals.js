@@ -55,67 +55,67 @@ function analyzeColor(input){
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// let randomColor = colors[Math.floor(Math.random() * colors.length)];
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-// let analyzeColor = randomColor
-// console.log(randomColor)
-//
-// if (analyzeColor == "red"){
-//     console.log("Some peppers are red")
-// } else if ( analyzeColor == "blue"){
-//     console.log("Not many foods are blue")
-// } else if (analyzeColor == "green"){
-//     console.log("the green in this food comes from cloraphyl")
-// } else if (analyzeColor == "yellow"){
-//     console.log("bannanas are yellow")
-// } else if (analyzeColor == "orange"){
-//     console.log("Orange is a color and a food")
-// } else if (analyzeColor == "indigo"){
-//     console.log("indigo is just fancy blue")
-// } else if (analyzeColor == "violet"){
-//     console.log("go frogs")
-// } else {
-//     console.log( "Not sure about" + analyzeColor)
-// }
+let analyzeColor2 = randomColor
+console.log(randomColor)
+
+if (analyzeColor2 === "red"){
+    console.log("Some peppers are red")
+} else if ( analyzeColor2 === "blue"){
+    console.log("Not many foods are blue")
+} else if (analyzeColor2 === "green"){
+    console.log("the green in this food comes from cloraphyl")
+} else if (analyzeColor2 === "yellow"){
+    console.log("bananas are yellow")
+} else if (analyzeColor2 === "orange"){
+    console.log("Orange is a color and a food")
+} else if (analyzeColor2 === "indigo"){
+    console.log("indigo is just fancy blue")
+} else if (analyzeColor2 === "violet"){
+    console.log("go frogs")
+} else {
+    console.log( "Not sure about" + analyzeColor2)
+}
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-//
-// let analyzeColor = prompt("what is your favorite color")
-// console.log(analyzeColor)
-//
-// switch (analyzeColor) {
-//     case "red":
-//         console.log("Hey apples are red")
-//         break;
-//     case "blue":
-//         console.log("Hey berries are blue")
-//         break;
-//     case "green":
-//         console.log("Hey grapes are green")
-//         break;
-//     case "yellow":
-//         console.log("Hey bannanas are yellow")
-//         break;
-//     case "indigo":
-//         console.log("Hey nothing is indigo")
-//         break;
-//     case "violet":
-//         console.log("Hey flowers are violet")
-//         break;
-//     case "orange":
-//         console.log("Hey nothing rymes with orange")
-//         break;
-//      default:
-//          break;
-// }
+
+let analyzeColor3 = prompt("what is your favorite color")
+console.log(analyzeColor3)
+
+switch (analyzeColor3) {
+    case "red":
+        console.log("Hey apples are red")
+        break;
+    case "blue":
+        console.log("Hey berries are blue")
+        break;
+    case "green":
+        console.log("Hey grapes are green")
+        break;
+    case "yellow":
+        console.log("Hey bannanas are yellow")
+        break;
+    case "indigo":
+        console.log("Hey nothing is indigo")
+        break;
+    case "violet":
+        console.log("Hey flowers are violet")
+        break;
+    case "orange":
+        console.log("Hey nothing rymes with orange")
+        break;
+     default:
+         break;
+}
 
 /**
  * TODO:
@@ -123,33 +123,33 @@ function analyzeColor(input){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-//
-// let analyzeColor = prompt("what is your favorite color")
-// console.log(analyzeColor)
-//
-// switch (analyzeColor) {
-//     case "red":
-//         alert("Hey apples are red")
-//         break;
-//     case "blue":
-//         alert("Hey berries are blue")
-//         break;
-//     case "green":
-//         alert("Hey grapes are green")
-//         break;
-//     case "yellow":
-//         alert("Hey bannanas are yellow")
-//         break;
-//     case "indigo":
-//         alert("Hey nothing is indigo")
-//         break;
-//     case "violet":
-//         alert("Hey flowers are violet")
-//         break;
-//     case "orange":
-//         alert("Hey nothing rymes with orange")
-//         break;
-// }
+
+let analyzeColor4 = prompt("what is your favorite color")
+console.log(analyzeColor4)
+
+switch (analyzeColor4) {
+    case "red":
+        alert("Hey apples are red")
+        break;
+    case "blue":
+        alert("Hey berries are blue")
+        break;
+    case "green":
+        alert("Hey grapes are green")
+        break;
+    case "yellow":
+        alert("Hey bannanas are yellow")
+        break;
+    case "indigo":
+        alert("Hey nothing is indigo")
+        break;
+    case "violet":
+        alert("Hey flowers are violet")
+        break;
+    case "orange":
+        alert("Hey nothing rymes with orange")
+        break;
+}
 
 /* ########################################################################## */
 
@@ -172,58 +172,58 @@ function analyzeColor(input){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-// let luckyNumber = Math.floor(Math.random() * 6);
-// console.log(luckyNumber)
-// let randomNumber = Math.floor(Math.random(1) * 100);
-// console.log(randomNumber)
-// let zeroDiscount = 1
-// let oneDiscount = .90
-// let twoDiscount = .75
-// let threeDiscount = .65
-// let fourDiscount = .50
-// let fiveDiscount = 0
-//
-// function calculateTotal(ln, ta){
-//     if (luckyNumber === 0){
-//         alert("Sorry no discount")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*zeroDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*zeroDiscount)))
-//
-//
-//     } else if ( luckyNumber === 1){
-//         alert("Congrats you get a %10 discount")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*oneDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*oneDiscount)))
-//
-//     } else if (luckyNumber === 2){
-//         alert("Congrats you get a %25 discount")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*twoDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*twoDiscount)))
-//
-//     } else if (luckyNumber === 3){
-//         alert("Congrats you get a %35 discount")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*threeDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*threeDiscount)))
-//     } else if (luckyNumber === 4){
-//         alert("Congrats you get a %50 discount")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*fourDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*fourDiscount)))
-//     } else if (luckyNumber === 5){
-//         alert("Congrats you get a %100 discount... aka FREE")
-//         alert("your total before discount is $" + randomNumber)
-//         alert("Your total with discount is $" + randomNumber*fiveDiscount)
-//         alert("You saved $" + (randomNumber-(randomNumber*fiveDiscount)))
-//
-//     }}
+let luckyNumber = Math.floor(Math.random() * 6);
+console.log(luckyNumber)
+let randomNumber = Math.floor(Math.random(1) * 100);
+console.log(randomNumber)
+let zeroDiscount = 1
+let oneDiscount = .90
+let twoDiscount = .75
+let threeDiscount = .65
+let fourDiscount = .50
+let fiveDiscount = 0
 
-// console.log(calculateTotal(luckyNumber, randomNumber))
-// console.log("The Lucky number is " +luckyNumber)
-// console.log("Total is $" + randomNumber )
+function calculateTotal(ln, ta){
+    if (luckyNumber === 0){
+        alert("Sorry no discount")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*zeroDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*zeroDiscount)))
+
+
+    } else if ( luckyNumber === 1){
+        alert("Congrats you get a %10 discount")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*oneDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*oneDiscount)))
+
+    } else if (luckyNumber === 2){
+        alert("Congrats you get a %25 discount")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*twoDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*twoDiscount)))
+
+    } else if (luckyNumber === 3){
+        alert("Congrats you get a %35 discount")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*threeDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*threeDiscount)))
+    } else if (luckyNumber === 4){
+        alert("Congrats you get a %50 discount")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*fourDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*fourDiscount)))
+    } else if (luckyNumber === 5){
+        alert("Congrats you get a %100 discount... aka FREE")
+        alert("your total before discount is $" + randomNumber)
+        alert("Your total with discount is $" + randomNumber*fiveDiscount)
+        alert("You saved $" + (randomNumber-(randomNumber*fiveDiscount)))
+
+    }}
+
+console.log(calculateTotal(luckyNumber, randomNumber))
+console.log("The Lucky number is " +luckyNumber)
+console.log("Total is $" + randomNumber )
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -232,6 +232,8 @@ function analyzeColor(input){
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
+
+//#############!!!!!! i did this all in the code above**************
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
