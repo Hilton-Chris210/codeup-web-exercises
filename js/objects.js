@@ -31,31 +31,32 @@
 
     //mini ex 2
 
-    const user = [
-        {
-            givenName: "Sam",
-            age: 21
-        },
-        {
-            givenName: "Kathy",
-            age: 34
-        },
-        {
-            givenName: "Karen",
-            age: 43
-        }
-    ];
-
-    console.log(user[0,1,2].givenName)
-    console.log(`${(user[0].givenName)} ${(user[1].givenName)} ${(user[2].givenName)}`)
-    // user[0].givenName = "John Doe"
-    console.log(user)
-
-user.forEach(function (input){
-    input.age += 1
-})
-    user.forEach(function (input){
-        input.givenName = "John Doe"})
+//     const user = [
+//         {
+//             givenName: "Sam",
+//             age: 21
+//         },
+//         {
+//             givenName: "Kathy",
+//             age: 34
+//         },
+//         {
+//             givenName: "Karen",
+//             age: 43
+//         }
+//     ];
+//
+//     console.log(user[0,1,2].givenName)
+//     console.log(`${(user[0].givenName)} ${(user[1].givenName)} ${(user[2].givenName)}`)
+//     // user[0].givenName = "John Doe"
+//     console.log(user)
+//
+// user.forEach(function (input){
+//     input.age += 1
+// });
+//     user.forEach(function (input){
+//         input.givenName = "John Doe"
+//     ;})
 
 
     // 0. Log each given name
@@ -83,7 +84,8 @@ user.forEach(function (input){
     };
     console.log(person.lastname)
     console.log(person.firstname)
-    console.log(person)
+
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -94,6 +96,10 @@ user.forEach(function (input){
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    person.sayHello = function (){
+        console.log(`hello from ${person.firstname} ${person.lastname} !`)
+    }
+    console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -108,11 +114,21 @@ user.forEach(function (input){
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    // if shopper spens > 200 apply 12% doiscont log final amount
+    shoppers.forEach(function(shoppers){
+        if(shoppers.amount > 200){
+            console.log( `${shoppers.name} your total befor discount is ${shoppers.amount} your discount is ${shoppers.amount * .12} and your new total is ${shoppers.amount - (shoppers.amount * .12)}`)
+        } else{
+            console.log(`${shoppers.name} you did not spend enough for a discount your total is ${shoppers.amount}`)
+        }
+    })
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
