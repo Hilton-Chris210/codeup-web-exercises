@@ -143,6 +143,44 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    let books = [
+        {
+            title: "Game of Trones",
+            author: {
+                firstname:"Gerorge",
+                lastname:"Martin",
+                },
+        },
+        {
+            title: "Harry Potter",
+            author: {
+                firstname:"JK",
+                lastname:"Rolling",
+            },
+        },
+        {
+            title: "Foundation",
+            author: {
+                firstname:"Isacc",
+                lastname:"Martin",
+            },
+        },
+        {
+            title: "Kujo",
+            author: {
+                firstname:"Steven",
+                lastname:"King",
+            },
+        },
+        {
+            title: "Jurrasic Park",
+            author: {
+                firstname:"micheal",
+                lastname:"Chrichton",
+            },
+        },
+    ]
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -167,7 +205,11 @@
      *      ---
      *      ...
      */
-
+    books.forEach(function(books){
+        console.log(` Book # ${books.index}
+         ${books.title} 
+         ${books.author.firstname} ${books.author.lastname}`)
+        })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
