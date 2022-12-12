@@ -2,9 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>Register With Us</title>
 </head>
 <body>
+<main>
+    <form method="post" action="https://request-inspector.glitch.me/">
+<!--    your Name-->
+    <div>Your Name</div>
+            <label for="first-name">First Name</label>
+            <input id="first-name"
+                   name="first-name"
+                   type="text"
+                   placeholder="Enter First Name">
+            <label for="last-name">Last Name</label>
+            <input id="last-name"
+                   name="Last-name"
+                   type="text"
+                   placeholder="Enter Last Name">
+        <br>
+<!--    <div>Business Name</div>-->
+                <label for="business-name">Business Name</label>
+                <input id="business-name"
+                       name="business-name"
+                       type="text"
+                       placeholder="Enter Your Business Name">
+        <br>
+<!--    <div>Email Address</div>-->
+                    <label for="user-email">Email Address</label>
+                    <input id="user-email"
+                           name="user-email"
+                           type="text"
+                           placeholder="Enter Your Email Address"
+                            value="example@gmail.com">
+        <br>
+<!--    <div>Phone Number</div>-->
+                        <label for="user-phone">Phone Number</label>
+                        <input id="user-phone"
+                               name="user-phone"
+                               type="text"
+                               placeholder="Enter Your Phone Number"
+                               value="(210) 639 0987">
+        <br>
+<!--    <div>City Where You Are Located</div>-->
+        <label for="user-loc">Your Location</label>
+        <input id="user-loc"
+               name="user-loc"
+               type="text"
+               placeholder="Enter Your Location">
+        <br>
+<!--    <div>Tell us about yourself</div>-->
+            <label for="user-bio">Tell us about yourself!</label>
+            <textarea id= "user-bio"
+                      name="user-bio"
+                      ></textarea>
+        <br>
+        <fieldset>
+            <legend>How did you hear about us?:</legend>
 
+            <div>
+                <input type="checkbox" id="Billboard" name="choice1" value="Billboard"
+                       checked>
+                <label for="Billboard">Billboard</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Internet" name="choice2" value="Internet">
+                <label for="Internet">Internet</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Radio" name="choice3" value="Radio">
+                <label for="Radio">Radio</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Other" name="choice4" value="Other">
+                <label for="Other">Other</label>
+            </div>
+        </fieldset>
+        <label for="web-select">What Browser do you Use:</label>
+
+        <select name="web-select" id="web-select">
+            <option value="">--Please choose an option--</option>
+            <option value="chrome">Chrome</option>
+            <option value="edge">Edge</option>
+            <option value="opera">Opera</option>
+            <option value="safari">Safari</option>
+            <option value="brave">Brave</option>
+            <option value="mozilla">Mozilla</option>
+        </select>
+        <br>
+        <button>submit</button>
+    </form>
+</main>
 </body>
 </html>
