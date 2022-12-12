@@ -80,12 +80,17 @@
 
     let person = {
     firstname: "Chris",
-    lastname: "Hilton"
+    lastname: "Hilton",
     };
     console.log(person.lastname)
     console.log(person.firstname)
 
-
+    let person1 = {
+        firstname: "Chris",
+        lastname: "Hilton",
+    };
+    console.log(person.lastname)
+    console.log(person.firstname)
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -97,7 +102,7 @@
      */
 
     person.sayHello = function (){
-        console.log(`hello from ${person.firstname} ${person.lastname} !`)
+        return `hello from ${this.firstname} ${this.lastname} !`
     }
     console.log(person.sayHello())
     /** TODO:
@@ -120,12 +125,14 @@
         {name: 'George', amount: 320}
     ];
 
-    // if shopper spens > 200 apply 12% doiscont log final amount
-    shoppers.forEach(function(shoppers){
-        if(shoppers.amount > 200){
-            console.log( `${shoppers.name} your total befor discount is ${shoppers.amount} your discount is ${shoppers.amount * .12} and your new total is ${shoppers.amount - (shoppers.amount * .12)}`)
+    // if shopper spends > 200 apply 12% doiscont log final amount
+    shoppers.forEach(function(shopper){
+        if(shopper.amount > 200){
+            let savings = parseFloat(shopper.amount)* .12;
+            let total = parseFloat(shopper.amount)- (savings);
+            console.log( `${shopper.name} your total before discount is ${shopper.amount} your discount is ${savings} and your new total is ${total.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}`)
         } else{
-            console.log(`${shoppers.name} you did not spend enough for a discount your total is ${shoppers.amount}`)
+            console.log(`${shopper.name} you did not spend enough for a discount your total is ${shopper.amount}`)
         }
     })
 
@@ -147,7 +154,7 @@
         {
             title: "Game of Trones",
             author: {
-                firstname:"Gerorge",
+                firstname:"George",
                 lastname:"Martin",
                 },
         },
@@ -205,10 +212,10 @@
      *      ---
      *      ...
      */
-    books.forEach(function(books){
-        console.log(` Book # ${books.index}
-         ${books.title} 
-         ${books.author.firstname} ${books.author.lastname}`)
+    books.forEach(function(book, index){
+        console.log(` Book # ${index + 1}
+        Title: ${book.title} 
+        Author: ${book.author.firstname} ${book.author.lastname}`)
         })
     /**
      * Bonus:
@@ -220,5 +227,17 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(title, author){
+   let authorArray = author.split(' ');
+    let bookObject = {
+       title: title,
+       author: {
+           firstname: authorArray[0],
+           lastname: authorArray[1],
+       },
+   };
+   return bookObject;
+    }
 
+    console.log(createBook('boss baby', "chris hilton" ))
 })();

@@ -124,32 +124,32 @@ switch (analyzeColor3) {
  * function to show it to the user.
  */
 
-let analyzeColor4 = prompt("what is your favorite color")
-console.log(analyzeColor4)
-
-switch (analyzeColor4) {
-    case "red":
-        alert("Hey apples are red")
-        break;
-    case "blue":
-        alert("Hey berries are blue")
-        break;
-    case "green":
-        alert("Hey grapes are green")
-        break;
-    case "yellow":
-        alert("Hey bannanas are yellow")
-        break;
-    case "indigo":
-        alert("Hey nothing is indigo")
-        break;
-    case "violet":
-        alert("Hey flowers are violet")
-        break;
-    case "orange":
-        alert("Hey nothing rymes with orange")
-        break;
-}
+// let analyzeColor4 = prompt("what is your favorite color")
+// console.log(analyzeColor4)
+//
+// switch (analyzeColor4) {
+//     case "red":
+//         alert("Hey apples are red")
+//         break;
+//     case "blue":
+//         alert("Hey berries are blue")
+//         break;
+//     case "green":
+//         alert("Hey grapes are green")
+//         break;
+//     case "yellow":
+//         alert("Hey bannanas are yellow")
+//         break;
+//     case "indigo":
+//         alert("Hey nothing is indigo")
+//         break;
+//     case "violet":
+//         alert("Hey flowers are violet")
+//         break;
+//     case "orange":
+//         alert("Hey nothing rymes with orange")
+//         break;
+// }
 
 /* ########################################################################## */
 
@@ -221,7 +221,6 @@ function calculateTotal(ln, ta){
 
     }}
 
-console.log(calculateTotal(luckyNumber, randomNumber))
 console.log("The Lucky number is " +luckyNumber)
 console.log("Total is $" + randomNumber )
 /**
