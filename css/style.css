@@ -1,0 +1,64 @@
+*{
+    Margin:0;
+    Padding:0;
+    Border:0;
+}
+@font-face {
+    font-family: "Rubik80sFade-Regular";
+    src: url("fonts/Rubik80sFade-Regular.ttf") format("tff"), url("ffonts/Rubik80sFade-Regular.ttf")
+    format("tff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: Geneva;
+    color: rgba(0, 0, 0, 0.48);
+    font-size: 12pt;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.hero-header{
+    color: darkblue;
+    font-size: 24pt;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 10px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 18pt;
+    margin-block-start: 10px;
+    margin-block-end:10px;
+    margin-inline-start: 20px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+ul{
+
+    margin-block-start: 10px;
+    margin-block-end:10px;
+    margin-inline-start: 40px;
+    margin-inline-end: 0px;
+
+}
+
+ol{
+
+    margin-block-start: 10px;
+    margin-block-end:10px;
+    margin-inline-start: 40px;
+    margin-inline-end: 0px;
+
+}
+img {
+    border-radius: 10%;
+}
