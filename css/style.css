@@ -1,15 +1,13 @@
-*{
-    Margin:0;
-    Padding:0;
-    Border:0;
+* {
+    Margin: 0;
+    Padding: 0;
+    Border: 0;
 }
-@font-face {
-    font-family: "Rubik80sFade-Regular";
-    src: url("fonts/Rubik80sFade-Regular.ttf") format("tff"), url("ffonts/Rubik80sFade-Regular.ttf")
-    format("tff");
-    font-weight: normal;
-    font-style: normal;
+body {
 }
+
+
+
 
 body{
     font-family: Geneva;
@@ -21,7 +19,12 @@ body{
     margin-inline-end: 0px;
 }
 
+h1,h2{
+    text-decoration: underline;
+}
+
 .hero-header{
+    text-align: center;
     color: darkblue;
     font-size: 24pt;
     margin-block-start: 10px;
@@ -32,7 +35,7 @@ body{
 }
 
 h2{
-    color: rgb(0, 0, 0);
+    color: rgb(66, 1, 1);
     display: block;
     font-size: 18pt;
     margin-block-start: 10px;
@@ -40,6 +43,7 @@ h2{
     margin-inline-start: 20px;
     margin-inline-end: 0px;
     font-weight: bold;
+
 }
 
 ul{
@@ -48,7 +52,7 @@ ul{
     margin-block-end:10px;
     margin-inline-start: 40px;
     margin-inline-end: 0px;
-
+    list-style-type: square;
 }
 
 ol{
@@ -61,4 +65,29 @@ ol{
 }
 img {
     border-radius: 10%;
+}
+
+table {
+    font-family: Impact ;
+}
+
+td {
+    font-style: italic;
+}
+
+tr{
+    font-size: larger;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: blue;
 }
