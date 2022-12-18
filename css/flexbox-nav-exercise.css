@@ -1,0 +1,41 @@
+* {
+    Margin: 0;
+    Padding: 0;
+    Border: 0;
+}
+
+.container{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #848487;
+    color: black;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: .1em;
+}
+
+.weblinks{
+    font-family: Work Sans;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
+
+.logo{
+    font-family: Montserrat;
+    font-size: 3em;
+    text-decoration: none;
+
+}
+
+.follow{
+    font-family: Work Sans;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
