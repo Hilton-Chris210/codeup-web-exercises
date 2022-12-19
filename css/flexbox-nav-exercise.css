@@ -23,6 +23,7 @@ a {
     font-family: Work Sans;
     text-decoration: none;
     font-size: 1.5em;
+    flex-basis: 25%;
 
 }
 
@@ -35,7 +36,10 @@ a {
 
 .follow{
     font-family: Work Sans;
+    display: flex;
     text-decoration: none;
     font-size: 1.5em;
+    flex-basis: 25%;
+    justify-content: flex-end;
 
 }
