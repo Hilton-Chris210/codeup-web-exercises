@@ -63,7 +63,7 @@ a {
 }
 .profile-image{
     position: absolute;
-    top: 33%;
+    top: 25%;
 }
 .btn {
     border: 1px solid var(--main-link-color);
