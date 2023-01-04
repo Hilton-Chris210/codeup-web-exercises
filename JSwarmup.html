@@ -83,46 +83,66 @@
 //input array with objects
 //output longest string of object name
 //foreach function goes thru and compares all name objects string length and outputs longest string
-    const pets = [
-    {
-        name: 'Sparky',
-        type: 'Fish',
-        age: 4
-    },
-    {
-        name: 'Mr. Pig',
-        type: 'Cat',
-        age: 4
-    },
-    {
-        name: 'Bubba',
-        type: 'Dog',
-        age: 5
-    },
-    {
-        name: 'Beans',
-        type: 'Dog',
-        age: 3
-    },
-    {
-        name: 'Mr. Salmon',
-        type: 'Fish',
-        age: 1
-    }
-];
+//     const pets = [
+//     {
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Beans',
+//         type: 'Dog',
+//         age: 3
+//     },
+//     {
+//         name: 'Mr. Salmon',
+//         type: 'Fish',
+//         age: 1
+//     }
+// ];
+//
+// // returnLongestPetName(pets) // returns 'Mr. Salmon'
+//
+//
+//         function returnLongestPetName(pets){
+//             const output = [];
+//             pets.forEach(pet => {
+//                 return pet.name;
+//                 });
+//             return output
+//         }
+//
+// console.log(returnLongestPetName(pets))
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filterList([1,2,‘a’,‘b’]) // returns [1,2]
+// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
+// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
 
-// returnLongestPetName(pets) // returns 'Mr. Salmon'
 
 
-        function returnLongestPetName(pets){
-            const output = [];
-            pets.forEach(pet => {
-                return pet.name;
-                });
-            return output
+function filterList(){
+    let arr = []
+    for( let i = 0; i < arr.length; i++){
+
+        if (typeof arr[i] !== "string") {
+
+            arr.push(arr[i]);
         }
+return arr
+    }
+}
 
-console.log(returnLongestPetName(pets))
+console.log(filterList(arr))
 
 
 </script>
