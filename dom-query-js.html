@@ -19,6 +19,8 @@
 <button id="btn2">Step 2</button>
 <button id="btn3">Step 3</button>
 <button id="btn4">Step 4</button>
+<button id="btn5">Step 5</button>
+<button id="btn6">Start Over</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -33,19 +35,19 @@
     (() => {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        // var mainHeader = document.getElementById("main-header");
+        //let  mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         // mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = document.getElementById("sub-header");
+        //let  subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
         // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
-        // var listItems = document.getElementsByTagName("li");
+        //let  listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
         // for (let i = 1; i < listItems.length; i += 2) {
@@ -61,29 +63,32 @@
         // }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph"); // html collection
-        console.log(subParagraphs);
+        // let subParagraphs = document.getElementsByClassName("sub-paragraph"); // html collection
+        // console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished";
+        // subParagraphs[0].innerHTML = "Mission Accomplished";
+
+        //TODO: Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+
 
         let btn1 = document.querySelector('#btn1')
         btn1.addEventListener("click", () => {
-            var mainHeader = document.getElementById("main-header");
+            let mainHeader = document.getElementById("main-header");
             mainHeader.innerHTML = "JavaScript is Cool";
         });
 
 
         let btn2 = document.querySelector('#btn2')
         btn2.addEventListener("click", () => {
-            var subHeader = document.getElementById("sub-header");
+            let subHeader = document.getElementById("sub-header");
             subHeader.style.color = "blue";
         });
 
 
         let btn3 = document.querySelector('#btn3')
         btn3.addEventListener("click", () => {
-            var listItems = document.getElementsByTagName("li");
+            let listItems = document.getElementsByTagName("li");
             for (let i = 1; i < listItems.length; i += 2) {
                     listItems[i].style.color = "grey";
                 }
@@ -92,7 +97,7 @@
 
         let btn4 = document.querySelector('#btn4')
         btn4.addEventListener("click", () => {
-            var listItems = document.getElementsByTagName("li");
+            let listItems = document.getElementsByTagName("li");
             for (let i = 0; i < listItems.length; i++) {
                     if (listItems[i].getAttribute("data-dbid") === "1") {
                         listItems[i].style.color = "blue";
@@ -100,6 +105,16 @@
                 }
         });
 
+        let btn5 = document.querySelector('#btn5')
+        btn5.addEventListener("click", () => {
+            let subParagraphs = document.getElementsByClassName("sub-paragraph");
+            subParagraphs[0].innerHTML = "Mission Accomplished";
+        });
+
+        let btn6 = document.querySelector('#btn6')
+        btn6.addEventListener("click", () => {
+            location.reload()
+        });
 
     })();
 </script>
