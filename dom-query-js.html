@@ -73,20 +73,22 @@
 
 
         let btn1 = document.querySelector('#btn1')
+        let btn2 = document.querySelector('#btn2')
+        let btn3 = document.querySelector('#btn3')
+        let btn4 = document.querySelector('#btn4')
+        let btn5 = document.querySelector('#btn5')
+        let btn6 = document.querySelector('#btn6')
+
         btn1.addEventListener("click", () => {
             let mainHeader = document.getElementById("main-header");
             mainHeader.innerHTML = "JavaScript is Cool";
         });
 
-
-        let btn2 = document.querySelector('#btn2')
         btn2.addEventListener("click", () => {
             let subHeader = document.getElementById("sub-header");
             subHeader.style.color = "blue";
         });
 
-
-        let btn3 = document.querySelector('#btn3')
         btn3.addEventListener("click", () => {
             let listItems = document.getElementsByTagName("li");
             for (let i = 1; i < listItems.length; i += 2) {
@@ -94,8 +96,6 @@
                 }
         });
 
-
-        let btn4 = document.querySelector('#btn4')
         btn4.addEventListener("click", () => {
             let listItems = document.getElementsByTagName("li");
             for (let i = 0; i < listItems.length; i++) {
@@ -105,13 +105,11 @@
                 }
         });
 
-        let btn5 = document.querySelector('#btn5')
         btn5.addEventListener("click", () => {
             let subParagraphs = document.getElementsByClassName("sub-paragraph");
             subParagraphs[0].innerHTML = "Mission Accomplished";
         });
 
-        let btn6 = document.querySelector('#btn6')
         btn6.addEventListener("click", () => {
             location.reload()
         });
