@@ -2,50 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JQuery Exercises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<style>
+
+
+    .yellow {
+        background-color: yellow;
+    }
+</style>
 </head>
 <body>
-<h1 class="header" id="header1">I am the H1</h1>
-    <ul class="list" id="list">
-        <li class="list-item" id="list_item1">q</li>
-        <li class="list-item" id="list_item2">a</li>
-        <li class="list-item" id="list_item3">b</li>
-        <li class="list-item" id="list_item4">c</li>
-        <li class="list-item" id="list_item5">d</li>
-    </ul>
-<p class="article" id="article 1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus, deserunt dolore earum eligendi explicabo illo ipsa maxime minus molestiae perferendis porro quidem quis repellat reprehenderit sequi soluta sunt, voluptatibus!</p>
-
-
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1 class="header" id="header1">I am the H1</h1>
+                <ul class="list" id="list">
+                    <li class="list-item" id="list_item1">q</li>
+                    <li class="list-item" id="list_item2">a</li>
+                    <li class="list-item" id="list_item3">b</li>
+                    <li class="list-item" id="list_item4">c</li>
+                    <li class="list-item" id="list_item5">d</li>
+                </ul>
+                <p class="article" id="article 1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus, deserunt dolore earum eligendi explicabo illo ipsa maxime minus molestiae perferendis porro quidem quis repellat reprehenderit sequi soluta sunt, voluptatibus!</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <!--<script src="./js/jquery-3.6.3.js"></script>-->
-<script>
-    // $(function() {
-    //     alert( 'The DOM has finished loading!' );
-    // });
-    // $('li').css("font-size", '20px')
-    // $('h1, p, li').css("background-color", 'yellow')
-    // $('h1').click(function() {
-    //     let h1Contents = $('h1').html();
-    //     alert(h1Contents);
-    // });
-    $('h1').click(function() {
-        $(this).css('background-color', '#FF0');
-    });
+<script type="text/javascript" src="./js/my-custom-javascript.js"></script>
 
-    $('p').click(function() {
-        $(this).css('font-size', '18px');
-    });
-
-    $('li').hover(
-        function() {
-            $(this).css('color', '#ff0000');
-        },
-        function() {
-            $(this).css('color', '#000000');
-        }
-    );
-
-
-</script>
 </body>
 </html>
