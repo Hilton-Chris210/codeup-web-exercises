@@ -6,6 +6,12 @@
   <title>JQuery Sandbox</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <style>
+    code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+    }
     .mobile-menu{
       position: fixed;
       top: 0px;
@@ -20,12 +26,12 @@
       right: 0px;
     }
 
-   .menu{
+    .menu{
 
-   }
-   .close-menu{
-     cursor: crosshair;
-   }
+    }
+    .close-menu{
+      cursor: crosshair;
+    }
   </style>
 </head>
 <body>
@@ -36,15 +42,36 @@
         <div class="column col-shrink">
           <button class="menu">Menu</button>
         </div>
-        <h1 class="header" id="header1">I am the H1</h1>
-        <ul class="list" id="list">
-          <li class="list-item" id="list_item1">q</li>
-          <li class="list-item" id="list_item2">a</li>
-          <li class="list-item" id="list_item3">b</li>
-          <li class="list-item" id="list_item4">c</li>
-          <li class="list-item" id="list_item5">d</li>
-        </ul>
-        <p class="article" id="article 1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus, deserunt dolore earum eligendi explicabo illo ipsa maxime minus molestiae perferendis porro quidem quis repellat reprehenderit sequi soluta sunt, voluptatibus!</p>
+        <h1 class="header" id="header1">This is a side menu bar demo</h1>
+        <code>
+         <br>
+          .mobile-menu{<br>
+            position: fixed;<br>
+            top: 0px;<br>
+            bottom: 0px;<br>
+            right: -350px;<br>
+            width: 300px;<br>
+            background-color: #7d7d7d;<br>
+            transition: ease;<br>
+            transition-duration: .5s;<br>
+          }<br>
+          .open{<br>
+            right: 0px;<br><br>
+          }<br>
+          .menu{<br>
+          }<br>
+          .close-menu{<br>
+            cursor: crosshair;<br>
+          }<br>
+        </code>
+        <code>
+          "use strict";<br>
+          $(document).ready(function (){<br>
+          $('.menu, .close-menu').click(function(){<br>
+          $('.mobile-menu').toggleClass('open');<br>
+          });<br>
+          });<br>
+        </code>
         <div class="mobile-menu">
           <div class="close-menu">
             (Close)
