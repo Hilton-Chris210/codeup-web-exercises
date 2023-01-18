@@ -320,41 +320,134 @@
 // }
 
 // write a function named shortestString that takes an array of strings and return the shortest string
+//
+// const books = [
+//     {
+//         "title": "Genetic Algorithms and Machine Learning for Programmers",
+//         "price": 36.99,
+//         "author": "Frances Buontempo"
+//     },
+//     {
+//         "title": "The Visual Display of Quantitative Information",
+//         "price": 38.00,
+//         "author": "Edward Tufte"
+//     },
+//     {
+//         "title": "Practical Object-Oriented Design",
+//         "author": "Sandi Metz",
+//         "price": 30.47
+//     },
+//     {
+//         "title": "Weapons of Math Destruction",
+//         "author": "Cathy O'Neil",
+//         "price": 17.44
+//     }
+// ]
+// function highestPriceBook(inputs){
+//     let newBook = {
+//         "title": "",
+//         "price": 0,
+//         "author": ""
+//     }
+//     inputs.forEach(function(input){
+//         if(input.price >= newBook.price){
+//             return input
+//         }
+//     });
+// }
 
-const books = [
+//
+// ================================= WARM UP
+
+// Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable if the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
+
+// example data...
+
+const neighborhoods = [
     {
-        "title": "Genetic Algorithms and Machine Learning for Programmers",
-        "price": 36.99,
-        "author": "Frances Buontempo"
-    },
-    {
-        "title": "The Visual Display of Quantitative Information",
-        "price": 38.00,
-        "author": "Edward Tufte"
-    },
-    {
-        "title": "Practical Object-Oriented Design",
-        "author": "Sandi Metz",
-        "price": 30.47
-    },
-    {
-        "title": "Weapons of Math Destruction",
-        "author": "Cathy O'Neil",
-        "price": 17.44
-    }
-]
-function highestPriceBook(inputs){
-    let newBook = {
-        "title": "",
-        "price": 0,
-        "author": ""
-    }
-    inputs.forEach(function(input){
-        if(input.price >= newBook.price){
-            return input
-        }
-    });
+    neighborhood: "Lovely Estates",
+    medianHomePrice: 280000,
+    pool: true,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 6},
+        {name: "High School", rating: 8}
+    ]
+},
+{
+    neighborhood: "Luminous Estates",
+    medianHomePrice: 270000,
+    pool: true,
+    tennis: false,
+    crimeRate: "high",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+},
+{
+    neighborhood: "Oak Mountain",
+    medianHomePrice: 290000,
+    pool: false,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+},
+{
+    neighborhood: "Ginormous Acres",
+    medianHomePrice: 350000,
+    pool: true,
+    tennis: true,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 9},
+        {name: "Middle School", rating: 9},
+        {name: "High School", rating: 9}
+    ]
 }
+]
+// function that sums school rating
+function schoolRatingSum(input){
+    let sum = 0
+    for(let i = 0; i < input.schools.length; i++ ){
+        sum += input.schools[i].rating
+    }
+    return sum
+}
+
+// function that determines if school is desirable and pushes that school into an array
+function isGoodHood(arr) {
+    let goodHoods = [];
+    for(let i = 0; i < arr.length; i++ ){
+        if (arr[i].medianHomePrice < 300000 && arr[i].crimeRate === "low" && schoolRatingSum(arr[i]) >= 24){
+            goodHoods.push(arr[i].neighborhood)
+        }
+            }
+    return goodHoods
+}
+
+console.log(isGoodHood(neighborhoods))
+console.log(neighborhoods.length)
+console.log(neighborhoods[0].neighborhood)
+console.log(neighborhoods[0].medianHomePrice)
+console.log(neighborhoods[0].crimeRate)
+console.log(neighborhoods[0].schools[2].rating)
+// console.log(schoolRatingSum(neighborhoods[0]))
+//
+// fn(neighborhood1) // returns false due to school rating
+// fn(neighborhood2) // returns false due to crime rate
+// fn(neighborhood3) // returns true
+// fn(neighborhood4) // returns false due to median home price
+
+
+
 
 </script>
 </body>
