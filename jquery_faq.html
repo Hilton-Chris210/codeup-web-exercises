@@ -12,9 +12,16 @@
     }
     .invisible{
       visibility: hidden;
+      font-size: 1px;
     }
     .highlight{
       background: khaki;
+    }
+    .bold{
+      font-weight: bold;
+    }
+    .blue{
+      color: #1a66ff;
     }
     .reveal{
       display: flex;
@@ -41,6 +48,19 @@
       margin-left: 20px;
     }
 
+    .reveal1{
+      display: flex;
+      cursor: pointer;
+      border: #333333;
+      border-radius: 3px;
+      border-style: solid;
+      background: #0fb784;
+      color: #333333;
+      width: 500px;
+      height: auto;
+      justify-content: center;
+      margin: auto;
+    }
 
   </style>
 </head>
@@ -113,7 +133,31 @@
             Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.
           </dd>
         </dl>
-
+        <div class="reveal1">makes the last li in each ul have a yellow background</div>
+        <dl>
+          <div>
+            <h3>Big Bend National Park</h3>
+            <ul>
+              <li>This park is huge</li>
+              <li>BBNP borders Mexico and has a border crossing to visit the town of Boquillas</li>
+              <li>The second-highest mountain in texas in in BBNP</li>
+              <li>People have died hiking the Outer Mountain Loop trail</li>
+            </ul>
+            <h3>Rocky Mountain National Park</h3>
+            <ul>
+              <li>Rocky Mountain is one of the nation’s highest national parks.</li>
+              <li>Has the highest continuous paved highway in the nation</li>
+              <li>Most of the park is designated as wilderness. Nearly 250,000 acres.</li>
+              <li>Rocky Mountain has an extensive museum collection. </li>
+            </ul>
+            <h3>Arches National Park</h3>
+            <ul>
+              <li>Number of documented arches: Over 2,000 (Some may have fallen and new arches may be forming.)</li>
+              <li>Longest arch: Landscape Arch has a light opening 306 feet (93.3 meters) across.</li>
+              <li>Tallest arch: Double Arch South has a vertical light opening of 112 feet (34.1 meters).</li>
+              <li>483 species of plants including the rare species: Canyonlands Biscuitroot</li>
+            </ul>
+          </div>
       </div>
     </div>
   </div>
@@ -125,14 +169,31 @@
 <script>
   "use strict";
   $(document).ready(function (){
+
+
+    //botton that toggles invisible on the dds
     $('.reveal').click(function(){
       $('dd').toggleClass('invisible');
     });
+    //function highlights the dts when clicked
     $('dt').click(function(){
       $(this).toggleClass('highlight');
     });
-  });
+//function that highlights the list lis in each ul
+    $('.reveal1').click(function(){
+      $('ul').each(function(index) {
+        $(this).children().last().toggleClass('highlight');
+      }); });
+    //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $('h3').click(function(){
+      $(this).next().children().toggleClass('bold');
+      });
+//When any list item is clicked, first li of the parent ul should have a font color of blue.
+    $('li').click(function(){
+      $(this).parent().children().first().toggleClass('blue');
+    });
 
+  });
 </script>
 </body>
 </html>
