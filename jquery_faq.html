@@ -134,66 +134,71 @@
           </dd>
         </dl>
         <div class="reveal1">makes the last li in each ul have a yellow background</div>
-        <dl>
-          <div>
-            <h3>Big Bend National Park</h3>
-            <ul>
-              <li>This park is huge</li>
-              <li>BBNP borders Mexico and has a border crossing to visit the town of Boquillas</li>
-              <li>The second-highest mountain in texas in in BBNP</li>
-              <li>People have died hiking the Outer Mountain Loop trail</li>
-            </ul>
-            <h3>Rocky Mountain National Park</h3>
-            <ul>
-              <li>Rocky Mountain is one of the nation’s highest national parks.</li>
-              <li>Has the highest continuous paved highway in the nation</li>
-              <li>Most of the park is designated as wilderness. Nearly 250,000 acres.</li>
-              <li>Rocky Mountain has an extensive museum collection. </li>
-            </ul>
-            <h3>Arches National Park</h3>
-            <ul>
-              <li>Number of documented arches: Over 2,000 (Some may have fallen and new arches may be forming.)</li>
-              <li>Longest arch: Landscape Arch has a light opening 306 feet (93.3 meters) across.</li>
-              <li>Tallest arch: Double Arch South has a vertical light opening of 112 feet (34.1 meters).</li>
-              <li>483 species of plants including the rare species: Canyonlands Biscuitroot</li>
-            </ul>
-          </div>
+        <div>
+          <h3>Big Bend National Park</h3>
+          <ul>
+            <li>This park is huge</li>
+            <li>BBNP borders Mexico and has a border crossing to visit the town of Boquillas</li>
+            <li>The second-highest mountain in texas in in BBNP</li>
+            <li>People have died hiking the Outer Mountain Loop trail</li>
+          </ul>
+          <h3>Rocky Mountain National Park</h3>
+          <ul>
+            <li>Rocky Mountain is one of the nation’s highest national parks.</li>
+            <li>Has the highest continuous paved highway in the nation</li>
+            <li>Most of the park is designated as wilderness. Nearly 250,000 acres.</li>
+            <li>Rocky Mountain has an extensive museum collection. </li>
+          </ul>
+          <h3>Arches National Park</h3>
+          <ul>
+            <li>Number of documented arches: Over 2,000 (Some may have fallen and new arches may be forming.)</li>
+            <li>Longest arch: Landscape Arch has a light opening 306 feet (93.3 meters) across.</li>
+            <li>Tallest arch: Double Arch South has a vertical light opening of 112 feet (34.1 meters).</li>
+            <li>483 species of plants including the rare species: Canyonlands Biscuitroot</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column d-flex" style="justify-content: space-evenly; text-align: center;">
+          <div class="col-3"><img src="./images/arora.jpg" alt="..." class="img-thumbnail"></div>
+          <div class="col-3"><img src="./images/colodforrest.jpg" alt="..." class="img-thumbnail"></div>
+          <div class="col-3"><img src="./images/lake1.jpg" alt="..." class="img-thumbnail"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<!--<script src="./js/jquery-3.6.3.js"></script>-->
-<!--<script type="text/javascript" src="./js/my-custom-javascript.js"></script>-->
-<script>
-  "use strict";
-  $(document).ready(function (){
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <!--<script src="./js/jquery-3.6.3.js"></script>-->
+  <!--<script type="text/javascript" src="./js/my-custom-javascript.js"></script>-->
+  <script>
+    "use strict";
+    $(document).ready(function (){
 
 
-    //botton that toggles invisible on the dds
-    $('.reveal').click(function(){
-      $('dd').toggleClass('invisible');
-    });
-    //function highlights the dts when clicked
-    $('dt').click(function(){
-      $(this).toggleClass('highlight');
-    });
-//function that highlights the list lis in each ul
-    $('.reveal1').click(function(){
-      $('ul').each(function(index) {
-        $(this).children().last().toggleClass('highlight');
-      }); });
-    //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    $('h3').click(function(){
-      $(this).next().children().toggleClass('bold');
+      //botton that toggles invisible on the dds
+      $('.reveal').click(function(){
+        $('dd').toggleClass('invisible');
+      });
+      //function highlights the dts when clicked
+      $('dt').click(function(){
+        $(this).toggleClass('highlight');
+      });
+//function that highlights the last lis in each ul
+      $('.reveal1').click(function(){
+        $('ul').each(function(index) {
+          $(this).children().last().toggleClass('highlight');
+        }); });
+      //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+      $('h3').click(function(){
+        $(this).next().toggleClass('bold');
       });
 //When any list item is clicked, first li of the parent ul should have a font color of blue.
-    $('li').click(function(){
-      $(this).parent().children().first().toggleClass('blue');
-    });
+      $('li').click(function(){
+        $(this).parent().children().first().toggleClass('blue');
+      });
 
-  });
-</script>
+    });
+  </script>
 </body>
 </html>

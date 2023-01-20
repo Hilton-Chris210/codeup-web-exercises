@@ -124,9 +124,9 @@
 //
 // console.log(returnLongestPetName(pets))
 // Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
-// filterList([1,2,‘a’,‘b’]) // returns [1,2]
-// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
-// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
+// filterList([1,2,'a','b']) // returns [1,2]
+// filterList([1,'a','b',0,15]) // returns [1,0,15]
+// filterList([1,2,'aasf','1','123',123]) // returns [1,2,123]
 
 
 //
@@ -362,83 +362,83 @@
 // Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable if the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
 
 // example data...
-
-const neighborhoods = [
-    {
-    neighborhood: "Lovely Estates",
-    medianHomePrice: 280000,
-    pool: true,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 6},
-        {name: "High School", rating: 8}
-    ]
-},
-{
-    neighborhood: "Luminous Estates",
-    medianHomePrice: 270000,
-    pool: true,
-    tennis: false,
-    crimeRate: "high",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-},
-{
-    neighborhood: "Oak Mountain",
-    medianHomePrice: 290000,
-    pool: false,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-},
-{
-    neighborhood: "Ginormous Acres",
-    medianHomePrice: 350000,
-    pool: true,
-    tennis: true,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 9},
-        {name: "Middle School", rating: 9},
-        {name: "High School", rating: 9}
-    ]
-}
-]
-// function that sums school rating
-function schoolRatingSum(input){
-    let sum = 0
-    for(let i = 0; i < input.schools.length; i++ ){
-        sum += input.schools[i].rating
-    }
-    return sum
-}
-
-// function that determines if school is desirable and pushes that school into an array
-function isGoodHood(arr) {
-    let goodHoods = [];
-    for(let i = 0; i < arr.length; i++ ){
-        if (arr[i].medianHomePrice < 300000 && arr[i].crimeRate === "low" && schoolRatingSum(arr[i]) >= 24){
-            goodHoods.push(arr[i].neighborhood)
-        }
-            }
-    return goodHoods
-}
-
-console.log(isGoodHood(neighborhoods))
-console.log(neighborhoods.length)
-console.log(neighborhoods[0].neighborhood)
-console.log(neighborhoods[0].medianHomePrice)
-console.log(neighborhoods[0].crimeRate)
-console.log(neighborhoods[0].schools[2].rating)
+//
+// const neighborhoods = [
+//     {
+//     neighborhood: "Lovely Estates",
+//     medianHomePrice: 280000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 6},
+//         {name: "High School", rating: 8}
+//     ]
+// },
+// {
+//     neighborhood: "Luminous Estates",
+//     medianHomePrice: 270000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "high",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// },
+// {
+//     neighborhood: "Oak Mountain",
+//     medianHomePrice: 290000,
+//     pool: false,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// },
+// {
+//     neighborhood: "Ginormous Acres",
+//     medianHomePrice: 350000,
+//     pool: true,
+//     tennis: true,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 9},
+//         {name: "Middle School", rating: 9},
+//         {name: "High School", rating: 9}
+//     ]
+// }
+// ]
+// // function that sums school rating
+// function schoolRatingSum(input){
+//     let sum = 0
+//     for(let i = 0; i < input.schools.length; i++ ){
+//         sum += input.schools[i].rating
+//     }
+//     return sum
+// }
+//
+// // function that determines if school is desirable and pushes that school into an array
+// function isGoodHood(arr) {
+//     let goodHoods = [];
+//     for(let i = 0; i < arr.length; i++ ){
+//         if (arr[i].medianHomePrice < 300000 && arr[i].crimeRate === "low" && schoolRatingSum(arr[i]) >= 24){
+//             goodHoods.push(arr[i].neighborhood)
+//         }
+//             }
+//     return goodHoods
+// }
+//
+// console.log(isGoodHood(neighborhoods))
+// console.log(neighborhoods.length)
+// console.log(neighborhoods[0].neighborhood)
+// console.log(neighborhoods[0].medianHomePrice)
+// console.log(neighborhoods[0].crimeRate)
+// console.log(neighborhoods[0].schools[2].rating)
 // console.log(schoolRatingSum(neighborhoods[0]))
 //
 // fn(neighborhood1) // returns false due to school rating
@@ -446,9 +446,57 @@ console.log(neighborhoods[0].schools[2].rating)
 // fn(neighborhood3) // returns true
 // fn(neighborhood4) // returns false due to median home price
 
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+//
+// 'a' or 'A' becomes '@'
+// 'i' or 'I' becomes '1'
+// 's' or 'S' becomes '$'
 
 
 
+// create a function retrieves teh ost expensive
+const shoppingCart = {
+    "tax": .08,
+    "items": [
+        {
+            "title": "orange juice",
+            "price": 3.99,
+            "quantity": 1
+        },
+        {
+            "title": "rice",
+            "price": 1.99,
+            "quantity": 3
+        },
+        {
+            "title": "beans",
+            "price": 0.99,
+            "quantity": 3
+        },
+        {
+            "title": "chili sauce",
+            "price": 2.99,
+            "quantity": 1
+        },
+        {
+            "title": "chocolate",
+            "price": 0.75,
+            "quantity": 9
+        }
+    ]
+}
+function mostSpentOnItem(input){
+    let mostExpensive = input.items[0]
+    for(let i = 0; i < input.items.length; i++ ){
+        if(input.items[i].price * input.items[i].quantity > input.items[0].price * input.items[0].quantity){
+            mostExpensive = input.items[i];
+        }
+
+    }
+    return mostExpensive;
+}
+
+console.log(mostSpentOnItem(shoppingCart))
 </script>
 </body>
 </html>

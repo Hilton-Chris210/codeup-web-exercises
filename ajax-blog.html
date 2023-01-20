@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX BLOG</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .container{
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+            height:100vh
+        }
+        #products{
+            width: 80%;
+            border: solid #1a66ff;
+
+        }
+        .table{
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(44, 44, 44, 0.84);
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        #refresh {
+            width: 100px;
+            background: #1a66ff;
+            color: #E6ECF0;
+            padding: 5px;
+            border: solid #749af5;
+            border-radius: 6px;
+        }
+        .blogstyle{
+            background: rgba(255, 255, 255, 0.21);
+            margin-bottom: 10px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column justify-content: center">
+                <h1 class="col-12">My BLOG</h1>
+
+                    <div class="col-12 justify-content: center" id="insertProducts"></div>
+
+
+            </div><!--coloumn-->
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center" id="refresh">
+                        REFRESH
+                    </div>
+                </div>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</div><!--                Wrapper-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function() {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/blog.json
+        // TODO: Take the data from blog.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        $.ajax('./data/blog.json').done(function(data) {
+            console.log(data);
+            let html = '';
+            for (let i = 0; i < data.length; i += 1) {
+                // language=HTML
+                html += `<div class="row">
+                    <div class="column blogstyle">
+                        <h1> ${data[i].title}</h1>
+                        <div> ${data[i].content}</div>
+                        <h4>  ${data[i].categories} </h4>
+                        <h3> ${data[i].date}</h3>
+                    </div>
+                    <tbody id="insertProducts"></tbody>
+                </div>`;
+            }
+            $('#insertProducts').html(html);
+        });
+
+        //refresh button
+        $('#refresh').click(function(){
+            $.getJSON("./data/blog.json", function(json) {
+                location.reload();
+            });});
+
+        // refresh automatically every 2 second
+        var previous = null;
+        var current = null;
+        setInterval(function() {
+            $.getJSON("./data/blog.json", function(json) {
+                current = JSON.stringify(json);
+                if (previous && current && previous !== current) {
+                    console.log('refresh');
+                    location.reload();
+                }
+                previous = current;
+            });
+        }, 2000);
+
+
+    })();
+</script>
+
+</body>
+</html>
