@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example jQuery Page</title>
+  <style>
+    .selected {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+<h1 id="codeup">Hello Codeup</h1>
+<h2 class="test">test</h2>
+<h2 class="test">test2</h2>
+
+<script src="./js/jquery-3.6.3.js"></script>
+<script>
+  "use strict";
+
+  $(document).ready(function() {
+    $( "h2" ).addClass( "selected" );
+
+    $('#codeup').hover(
+            function() {
+              $(this).css('background-color', '#FF0');
+            },
+            function() {
+              $(this).css('background-color', '#FFF');
+            }
+    );
+  });
+</script>
+</body>
+</html>

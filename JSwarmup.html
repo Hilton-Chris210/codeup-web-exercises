@@ -455,48 +455,90 @@
 
 
 // create a function retrieves teh ost expensive
-const shoppingCart = {
-    "tax": .08,
-    "items": [
-        {
-            "title": "orange juice",
-            "price": 3.99,
-            "quantity": 1
-        },
-        {
-            "title": "rice",
-            "price": 1.99,
-            "quantity": 3
-        },
-        {
-            "title": "beans",
-            "price": 0.99,
-            "quantity": 3
-        },
-        {
-            "title": "chili sauce",
-            "price": 2.99,
-            "quantity": 1
-        },
-        {
-            "title": "chocolate",
-            "price": 0.75,
-            "quantity": 9
-        }
-    ]
-}
-function mostSpentOnItem(input){
-    let mostExpensive = input.items[0]
-    for(let i = 0; i < input.items.length; i++ ){
-        if(input.items[i].price * input.items[i].quantity > input.items[0].price * input.items[0].quantity){
-            mostExpensive = input.items[i];
-        }
+//
+//
+// let cars = [
+//     {make: 'jeep',
+//         model: 'wranlger',
+//         year: '2016'},
+//     {make: 'honda',
+//         model: 'accord',
+//         year: '2016'},
+//     {make: 'ford',
+//         model: 'f150',
+//         year: '2016'}
+// ]
 
+// function createArray(arr){
+//     let makes = []
+//     for(let i = 0; i < arr.length; i++){
+//         makes.push(arr[i].make)
+//     }
+//     return makes
+// }
+//
+// console.log(createArray(cars))
+
+// function createArray(arrays){
+//     let makes = [];
+//     arrays.forEach(function(arr){
+//         makes.push(arr.make)
+//     });
+//     return makes
+// }
+//
+// console.log(createArray(cars))
+
+//Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
+
+
+    const strs = [
+    {
+        id: 1,
+        str: 'hello'
+    },
+    {
+        id: 2,
+        str: 'world'
+    },
+    {
+        id: 3,
+        str: 'codeup'
+    },
+    {
+        id: 4,
+        str: 'x'
     }
-    return mostExpensive;
+]
+function reversStrings(strs) {
+    for (let i = 0; i < strs.length; i += 1) {
+        strs[i].str = strs[i].str.split('').reverse().join('');
+    }
+    return strs;
 }
+console.log(reversStrings(strs))
+//
+// reverseStrings(strs) // returns...
+    //
+    // [
+    // {
+    //     id: 1,
+    //     str: 'olleh'
+    // },
+    //     {
+    //         id: 2,
+    //         str: 'dlrow'
+    //     },
+    //     {
+    //         id: 3,
+    //         str: 'puedoc'
+    //     },
+    //     {
+    //         id: 4,
+    //         str: 'x'
+    //     }
+    // ]
 
-console.log(mostSpentOnItem(shoppingCart))
 </script>
 </body>
 </html>
