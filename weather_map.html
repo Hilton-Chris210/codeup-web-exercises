@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <title>Weather Practice</title>
   <!--my keys file-->
-  <script src="js/keys.js"></script>
+
   <!--bootstrap link-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!-- Mapbox CSS -->
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <style>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+    <style>
     body { margin: 0; padding: 0; }
     #map{
       width: 100%;
@@ -41,18 +44,16 @@
   </style>
 </head>
 <body>
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
 
 
 
 <div class="page-wrapper">
   <div class="container ">
-
+      <div class="row" id="map"></div>
       <div class="row justify-content-center" id="insertProducts"></div>
       <div class="row justify-content-center" id="insertProducts2"></div>
-      <div class="row" id="map"></div>
+
 
   </div>
 </div>
@@ -62,98 +63,20 @@
 
 
 
+<!--keys-->
+<script src="js/keys.js"></script>
 <!--jquery-->
 <script src="./js/jquery-3.6.3.js"></script>
+<!--Mapbox api-->
 
-<script>
-
-
-  mapboxgl.accessToken = keys.mapbox;
-
-  const map = new mapboxgl.Map({
-    container: 'map',
-// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-79.4512, 43.6568],
-    zoom: 13
-  });
-  // Add the control to the map.
-  map.addControl(
-          new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl
-          })
-  );
-  let searchInput = document.getElementsByClassName('mapboxgl-ctrl-geocoder--input');
-
-  // Print the first element
-  console.log(searchInput); //search input
-
-  console.log()
-</script>
-
-
-<script>
-  "use strict";
-  let curLocation = {
-    lat: 29.4252,
-    long: -98.4916
-  }
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 
 
 
 
-  $.get("http://api.openweathermap.org/data/2.5/forecast", {
-      lat: curLocation.lat,
-      lon: curLocation.long,
-      appid: keys.openWeather,
-      units: 'imperial'
-  }).done(function(data) {
-    console.log(data)
-    // can be used to get forecast conditions at current time in increments of 24 hours
-    let html2 = "";
-      let html = `
-<div class="col-12 p-2 m-2 shadow bg-body-tertiary rounded text-center" id="current">
-                    <div>Current Conditions for ${data.city.name}</div>
-                    <img
-        src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@4x.png"
-        class="card-img-top"
-        alt="Weather description"
-/>
-                        <div> Current Temp ${Math.round(data.list[0].main.temp)} °F</div>
-                        <div> Max Temp ${Math.round(data.list[0].main.temp_max)} °F </div>
-                        <div> Min Temp ${Math.round(data.list[0].main.temp_min)} °F</div>
-                        <div> Winds ${Math.round(data.list[0].wind.speed)} mph</div>
-                        <div> ${data.list[0].weather[0].description}</div>
-                                        </div>
-`
-    for (let i = 1; i < data.list.length; i += 8) {
-      html2 += `
-<div class="col-2 p-2 m-2 shadow bg-body-tertiary rounded text-center">
-                        <div>${(data.list[i].dt_txt).substring(5, 10)}</div>
-                        <img
-        src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@4x.png"
-        class="card-img-top"
-        alt="Weather description"
-/>
-                         <div> Max Temp ${Math.round(data.list[i].main.temp_max)} °F </div>
-                        <div> Min Temp ${Math.round(data.list[i].main.temp_min)} °F</div>
-                        <div> Winds ${Math.round(data.list[i].wind.speed)} mph</div>
-                        <div> ${data.list[i].weather[0].description}</div>
-                       </div>`;
-    }
-    $('#insertProducts').html(html);
-      $('#insertProducts2').html(html2);
-
-    // $('#codeup').html(`${data.list[i].main.temp}`);
-  }).fail(function(jqXhr, status, error) {
-    console.log(jqXhr);
-    console.log(status);
-    console.log(error);
-  });
-
-
-</script>
+<!--</script>-->
+<script src="./js/weather-map.js"></script>
 <!--jquery-->
 </body>
 </html>

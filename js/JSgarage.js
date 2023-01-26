@@ -4,15 +4,15 @@
 // =========================================Arrays=========================================
 // =========================================strings=========================================
             //     takes a dtring input and returns the last 2 characters
-function returnLastTwo(input){
-        return input.substring((input.length - 2), input.length)
-}
-
-            // takes in 2 inputs and returns the input string reversed to the input length specified
-    function returnReverse(i1,i2){
-        let reversed = i1.split("").reverse().join("");
-        return reversed.substring(0,i2)
-}
+// function returnLastTwo(input){
+//         return input.substring((input.length - 2), input.length)
+// }
+//
+//             // takes in 2 inputs and returns the input string reversed to the input length specified
+//     function returnReverse(i1,i2){
+//         let reversed = i1.split("").reverse().join("");
+//         return reversed.substring(0,i2)
+// }
 // =========================================numbers=========================================
 
 //code wars
@@ -111,3 +111,14 @@ function returnLastTwo(input){
 //                 return input.slice(oddIndex,(oddIndex+1))
 //       }
 //   }
+
+``//write a function that takes in an array of numbers and returns the sum of that array
+// function sumArray(array){
+//     let sum = 0;
+//     for(let i = 0; i < array.length; i++){
+//         sum += array[i]
+//     }
+//     return sum
+// }
+// console.log(sumArray([1,2,3,4,5]))
+

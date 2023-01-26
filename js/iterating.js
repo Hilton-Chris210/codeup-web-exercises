@@ -86,4 +86,3 @@
     console.log(lastItem(names))
 })();
 
-

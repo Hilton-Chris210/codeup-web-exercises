@@ -1,4 +1,4 @@
-"use strict";
+
 console.log('Hello from external JavaScript');
 alert('Welcome To My Website!');
 var favcolor = prompt('What is your favorite color?:');
