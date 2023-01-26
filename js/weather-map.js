@@ -67,13 +67,14 @@ const initMap = async () => {
 const initControl = async () => {
     let map = await initMap();
     // Add the control to the map.
-    map.addControl(new mapboxgl.NavigationControl());
+
     map.addControl(
         new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
             mapboxgl: mapboxgl
         })
     );
+    map.addControl(new mapboxgl.NavigationControl());
     // If you need to put a event listener on the the search input, uncomment below
     // let searchInput = document.querySelector('.mapboxgl-ctrl-geocoder--input');
     forecastUpdate(map)

@@ -90,7 +90,7 @@ function getNames (names, obj) {
 
 let text = `your instructor names are `
 let instructorNames = users.reduce(getNames, text);
-
+let period = "."
 console.log(instructorNames)
 
 
