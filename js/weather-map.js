@@ -89,8 +89,5 @@ document.addEventListener("DOMContentLoaded",async function(){
 
 });
 
-// Print the first element
-//console.log(searchInput); //search input
 
-// openweather
 
