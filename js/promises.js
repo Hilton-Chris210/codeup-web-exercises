@@ -1,27 +1,5 @@
-// async function getUserEmail(){
-//     try {
-//         let response = await fetch('https://api.github.com/user/emails', {headers: {'Authorization': '${keys.github}'}})
-//     } catch(error){
-//
-//     }
-// }
+
 let userName = "Hilton-Chris210"
-
-// fetch(`https://api.github.com/users/${userName}/events`, {headers: {'authorization': `token ${keys.github}`}})
-//     .then( response => {
-//         response.json().then( users => {
-//             console.log(response)
-
-            // users.forEach( userObj  => {
-            //     // do something with the username login
-            //     if(userObj.type === "PushEvent"){
-            //
-            //         console.log(userObj)
-            //
-            //     }
-            // });
-    //     });
-    // });
 
 async function fetchGitJSON(userName) {
         try {
