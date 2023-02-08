@@ -122,3 +122,16 @@
 // }
 // console.log(sumArray([1,2,3,4,5]))
 
+let myFoods = ['Pizza', 'Chicken', 'Hot Wings']
+//
+// // for (let i = 0; i < myFoods.length; i++){
+// //     console.log(myFoods[i])
+//
+// }
+
+
+    myFoods.map(food => {
+        if(food === "Chicken"){
+            console.log(`This is the food that i like: ${food}`);
+            }
+})
