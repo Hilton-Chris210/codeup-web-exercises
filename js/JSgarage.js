@@ -129,9 +129,11 @@ let myFoods = ['Pizza', 'Chicken', 'Hot Wings']
 //
 // }
 
-
+const logFoods = async () =>{
     myFoods.map(food => {
-        if(food === "Chicken"){
+        if (food === "Chicken") {
             console.log(`This is the food that i like: ${food}`);
-            }
-})
+        }
+    })
+}
+logFoods()

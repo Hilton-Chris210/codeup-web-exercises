@@ -1738,7 +1738,7 @@ function findAverageDogAge(input){
             dogs.push(input.age)
         }
     }
-    return
+    return dogs.reduce((a,b) => a + b, 0) / dogs.length
 }
 
 
